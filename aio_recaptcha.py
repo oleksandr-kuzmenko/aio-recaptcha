@@ -19,7 +19,7 @@ class Recaptcha:
         url = URL(self.VERIFY_URL).with_query(
             secret=self._secret_key,
             response=params.get('g-recaptcha-response'),
-            remoteip=remote_ip,                
+            remoteip=remote_ip,
         )
 
         async with ClientSession() as session:
